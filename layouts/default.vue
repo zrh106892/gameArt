@@ -1,8 +1,8 @@
 <template>
-	<div>
+	<v-app>
 		<Header />
 		<slot />
-	</div>
+	</v-app>
 </template>
 
 <script lang="ts" setup></script>
