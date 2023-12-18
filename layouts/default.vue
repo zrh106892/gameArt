@@ -1,10 +1,10 @@
-<script lang="ts" setup></script>
-
 <template>
-  <div>
-    <Header />
-    <slot />
-  </div>
+	<div>
+		<Header />
+		<slot />
+	</div>
 </template>
+
+<script lang="ts" setup></script>
 
 <style scoped></style>
