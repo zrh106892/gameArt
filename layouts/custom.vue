@@ -28,10 +28,11 @@
 						variant="solo-filled"
 					></v-text-field>
 				</v-responsive>
+				<v-btn @click="toggleTheme"> Button </v-btn>
 			</v-container>
 		</v-app-bar>
 
-		<v-main class="bg-grey-lighten-3">
+		<v-main>
 			<v-container>
 				<v-row>
 					<v-col cols="2">
@@ -46,18 +47,14 @@
 
 								<v-divider class="my-2"></v-divider>
 
-								<v-list-item
-									color="grey-lighten-4"
-									link
-									title="Refresh"
-								></v-list-item>
+								<v-list-item link title="Refresh"></v-list-item>
 							</v-list>
 						</v-sheet>
 					</v-col>
 
 					<v-col>
 						<v-sheet min-height="70vh" rounded="lg">
-							<!--  -->
+							<slot></slot>
 						</v-sheet>
 					</v-col>
 				</v-row>
@@ -67,6 +64,13 @@
 </template>
 
 <script setup>
+import { useTheme } from "vuetify";
+const theme = useTheme();
+function toggleTheme() {
+	theme.global.name.value = theme.global.current.value.dark
+		? "light"
+		: "dark";
+}
 const links = ["Dashboard", "Messages", "Profile", "Updates"];
 </script>
 

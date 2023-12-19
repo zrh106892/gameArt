@@ -1,7 +1,11 @@
 <script lang="ts" setup></script>
 
 <template>
-	<div>Page: foo</div>
+	<div class="index">index</div>
 </template>
 
-<style scoped></style>
+<style lang="scss" scoped>
+.index {
+	font-size: 28px;
+}
+</style>
